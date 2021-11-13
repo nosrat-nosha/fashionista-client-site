@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import useAuth from "../../Hook/uesAuth";
 import user2 from "../../Pages/images/user.png";
-
+import Rating from "react-rating";
 const Review = () => {
 	const [reviews, setReviews] = useState([]);
 	const { user } = useAuth();
@@ -32,8 +32,11 @@ const Review = () => {
 								</Card.Title>
 								<Card.Text>Email :{review.email}</Card.Text>
 								<Card.Text>Rating :{review.rating}</Card.Text>
+								<Card.Text>Rating :{review.rating}</Card.Text>
 
-								<Card.Text>Comment :{review.Comment}</Card.Text>
+								<Card.Text>
+									<Rating></Rating>
+								</Card.Text>
 							</Card.Body>
 							<Card.Footer></Card.Footer>
 						</Card>

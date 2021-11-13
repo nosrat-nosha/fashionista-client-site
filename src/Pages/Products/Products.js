@@ -65,11 +65,11 @@ const Products = () => {
 				<Row>
 					<Col sm={6} className="p-5 mx-auto ">
 						<h2 className="text-center shadow">
-							OUR BEST <span className="text-danger"> PRODUCTS</span>{" "}
+							OUR TEAM <span className="text-danger">MEMBERS </span>{" "}
 						</h2>
 					</Col>
 				</Row>
-				<CardGroup className="bg-warning p-5 g-4 shadow-lg">
+				<CardGroup className="bg-danger p-5 g-4 shadow-lg">
 					<Card>
 						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
 						<Card.Body className="text-center">
