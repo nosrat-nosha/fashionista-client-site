@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row, Button } from "react-bootstrap";
+import { Card, Col, Container, Row, Button, CardGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Products.css";
+import user from "../../Pages/images/user1.png";
 
 const Products = () => {
 	const [products, setProducts] = useState([]);
@@ -59,6 +60,34 @@ const Products = () => {
 					))}
 				</Row>
 			</Container>
+
+			<div className="team-container">
+				<h2 className="p-5 text-warning">Our Team Members</h2>
+				<CardGroup className="bg-warning p-5 g-4 shadow-lg">
+					<Card>
+						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
+						<Card.Body>
+							<Card.Title>Founder</Card.Title>
+							<Card.Text>Name: Adam Smith</Card.Text>
+						</Card.Body>
+					</Card>
+					<Card>
+						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
+						<Card.Body>
+							<Card.Title>Co-Founder</Card.Title>
+							<Card.Text>Name: juliana smith</Card.Text>
+						</Card.Body>
+					</Card>
+					<Card>
+						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
+						<Card.Body>
+							<Card.Title>Manager</Card.Title>
+							<Card.Text>Name: wiliam Hary</Card.Text>
+						</Card.Body>
+					</Card>
+				</CardGroup>
+				<hr />
+			</div>
 		</>
 	);
 };
