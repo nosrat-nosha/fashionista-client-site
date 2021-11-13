@@ -32,7 +32,6 @@ const Review = () => {
 								</Card.Title>
 								<Card.Text>Email :{review.email}</Card.Text>
 								<Card.Text>Rating :{review.rating}</Card.Text>
-								<Card.Text>Rating :{review.rating}</Card.Text>
 
 								<Card.Text>
 									<Rating
