@@ -35,7 +35,11 @@ const Review = () => {
 								<Card.Text>Rating :{review.rating}</Card.Text>
 
 								<Card.Text>
-									<Rating></Rating>
+									<Rating
+										initialRating={review.rating}
+										emptySymbol="far fa-star"
+										fullSymbol="fas fa-star"
+									></Rating>
 								</Card.Text>
 							</Card.Body>
 							<Card.Footer></Card.Footer>
