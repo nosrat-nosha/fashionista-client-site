@@ -1,6 +1,6 @@
 .App {
 	text-align: center;
-	margin: 0 auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 

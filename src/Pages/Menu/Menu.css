@@ -1,0 +1,9 @@
+.nav-li {
+	text-decoration: none;
+	padding: 5px 5px;
+	color: white;
+}
+
+.nav-li:hover {
+	color: rgb(155, 13, 13);
+}

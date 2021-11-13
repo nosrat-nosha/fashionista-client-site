@@ -15,19 +15,27 @@ const MyOrders = () => {
 			.then((data) => setMyOrder(data));
 	}, [user?.email]);
 
-	const handelDeleteOrder = (id) => {
-		fetch(`http://localhost:5000/products/${id}`, {
+	const handelDelete = (id) => {
+		console.log("click");
+		const url = `http://localhost:5000/products/${id}`;
+		fetch(url, {
 			method: "DELETE",
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				setMyOrder(data);
+				console.log(data);
 			});
 	};
 
 	return (
 		<div>
-			<h2>my orders {myOrder.length}</h2>
+			<Row>
+				<Col sm={6} className="p-5 mx-auto ">
+					<h2 className="text-center shadow">
+						MY <span className="text-danger">ORDERS</span>{" "}
+					</h2>
+				</Col>
+			</Row>
 			<Row>
 				{myOrder?.map((order) => (
 					<Col sm={4} lg={6} key={order._id}>
@@ -53,13 +61,13 @@ const MyOrders = () => {
 							<Card.Footer></Card.Footer>
 						</Card>
 						<Button
-							onClick={() => handelDeleteOrder(order._id)}
+							onClick={() => handelDelete(order._id)}
 							style={{
 								textDecoration: "none",
 								color: "white",
 							}}
 						>
-							Cancel Order
+							cancel
 						</Button>
 					</Col>
 				))}

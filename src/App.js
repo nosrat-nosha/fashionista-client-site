@@ -21,6 +21,8 @@ import AddAProduct from "./Pages/AddAProduct/AddAProduct";
 import ManageAllOrders from "./Pages/ManageAllOrders/ManageAllOrders";
 import ManageProducts from "./Pages/ManageProducts/ManageProducts";
 import Logout from "./Pages/Logout/Logout";
+import Footer from "./Pages/Footer/Footer";
+import Pay from "./Pages/Pay/Pay";
 
 function App() {
 	return (
@@ -28,12 +30,19 @@ function App() {
 			<AuthProvider>
 				<Router>
 					<Menu></Menu>
+
 					<Switch>
 						<Route exact path="/">
 							<Home></Home>
 						</Route>
 						<Route path="/home">
 							<Home></Home>
+						</Route>
+						<Route path="/pay">
+							<Pay></Pay>
+						</Route>
+						<Route exact path="footer">
+							<Footer></Footer>
 						</Route>
 						<Route path="/explore">
 							<Explore></Explore>
@@ -80,6 +89,7 @@ function App() {
 						</Route> */}
 					</Switch>
 				</Router>
+				<Footer></Footer>
 			</AuthProvider>
 		</div>
 	);

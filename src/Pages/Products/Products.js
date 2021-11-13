@@ -15,8 +15,10 @@ const Products = () => {
 		<>
 			<Container>
 				<Row>
-					<Col sm={12}>
-						<h2 className="text-center">OUR BEST PRODUCTS</h2>
+					<Col sm={6} className="p-5 mx-auto ">
+						<h2 className="text-center shadow">
+							OUR BEST <span className="text-danger"> PRODUCTS</span>{" "}
+						</h2>
 					</Col>
 				</Row>
 				<Row className="grid  gy-4 gx-4">
@@ -24,12 +26,11 @@ const Products = () => {
 						<Col sm={4} key={product._id}>
 							<Card className=" shadow">
 								<Card.Img
+									className="mx-auto rounded-circle"
 									style={{
-										height: "15rem",
-
-										alignItems: "center",
+										height: "12rem",
+										width: "12rem",
 									}}
-									variant="top"
 									src={product.img}
 								/>
 								<Card.Body>
@@ -41,7 +42,7 @@ const Products = () => {
 									</Card.Text>
 								</Card.Body>
 								<Card.Footer>
-									<Button>
+									<Button className="btn btn-danger">
 										<Link
 											to={`/purchase/${product._id}`}
 											style={{

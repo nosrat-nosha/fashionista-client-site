@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hook/uesAuth";
@@ -55,24 +56,38 @@ const Registration = () => {
 	};
 	return (
 		<div className="text-center">
-			<h1>Registration</h1>
-			<form onSubmit={handelRegistration}>
-				<input onBlur={handelGetEmail} type="email" placeholder="email" />{" "}
-				<br />
-				<input
-					onBlur={handelGetPassword}
-					type="password"
-					placeholder="password"
-				/>{" "}
-				<br />
-				<input type="submit" />
-			</form>
-
-			<button onClick={handelGoogleLogin} className="btn btn-warning">
-				Google Log In
-			</button>
-			<p>already registerd</p>
-			<Link to="/login"> log in </Link>
+			<Row>
+				<Col lg={6} sm={4} className="mx-auto">
+					<h1>Registration</h1>
+					<form onSubmit={handelRegistration}>
+						<input
+							onBlur={handelGetEmail}
+							className="form-control"
+							type="email"
+							placeholder="email"
+						/>{" "}
+						<br />
+						<input
+							onBlur={handelGetPassword}
+							className="form-control"
+							type="password"
+							placeholder="password"
+						/>{" "}
+						<br />
+						<input className="btn btn-danger" type="submit" />
+					</form>
+					<br />
+					<hr />
+					<button onClick={handelGoogleLogin} className="btn btn-warning">
+						Google Log In
+					</button>
+					<p>
+						{" "}
+						<span className="text-danger fw-bold">Already register?</span>{" "}
+						<Link to="/login"> log in </Link>
+					</p>
+				</Col>
+			</Row>
 		</div>
 	);
 };

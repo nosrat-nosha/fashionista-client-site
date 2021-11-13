@@ -43,6 +43,7 @@ const Purchase = () => {
 			productPrice: selected?.price,
 			color: selected?.color,
 			img: selected?.img,
+			status: "pending",
 		};
 		console.log(productData);
 		// send data to server
@@ -89,11 +90,11 @@ const Purchase = () => {
 						</Card.Body>
 					</Card>
 				</Col>
-				<Col lg={6} sm={4}>
-					<h2>User Details</h2>
+				<Col lg={6} sm={4} className="p-3">
+					<h2 className="">USER DETAILS</h2>
 					<form onSubmit={handelBookingSubmit}>
 						<input
-							className=""
+							className="form-control"
 							name="displayName"
 							defaultValue={user.displayName}
 							onBlur={handleOnBlur}
@@ -102,7 +103,7 @@ const Purchase = () => {
 						/>{" "}
 						<br />
 						<input
-							className=""
+							className="form-control"
 							name="email"
 							onBlur={handleOnBlur}
 							defaultValue={user.email}
@@ -111,14 +112,17 @@ const Purchase = () => {
 						/>{" "}
 						<br />
 						<input
-							className=""
+							className="form-control"
 							type="phone"
 							onBlur={handleOnBlur}
 							name="phone"
 							placeholder="phones"
 						/>{" "}
 						<br />
-						<Button type="submit"> Place Order</Button>
+						<Button className="btn btn-danger" type="submit">
+							{" "}
+							Place Order
+						</Button>
 					</form>
 				</Col>
 			</Row>

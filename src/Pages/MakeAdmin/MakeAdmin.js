@@ -22,6 +22,7 @@ const MakeAdmin = () => {
 				<input
 					name="email"
 					placeholder="email"
+					value={user?.email}
 					type="email"
 					{...register("email")}
 				/>
