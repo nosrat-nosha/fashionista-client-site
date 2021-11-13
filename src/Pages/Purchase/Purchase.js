@@ -42,6 +42,7 @@ const Purchase = () => {
 			productName: selected?.type,
 			productPrice: selected?.price,
 			color: selected?.color,
+			img: selected?.img,
 		};
 		console.log(productData);
 		// send data to server
@@ -54,7 +55,9 @@ const Purchase = () => {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
+				if (data.insertedId) {
+					alert("data inserted");
+				}
 			});
 		alert("place order");
 		e.preventDefault();

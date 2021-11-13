@@ -1,6 +1,5 @@
-import Button from "@restart/ui/esm/Button";
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hook/uesAuth";
 
@@ -17,8 +16,8 @@ const Menu = () => {
 							<Link to="/home">Home</Link>
 							<Link to="/explore">Explore</Link>
 							<Link to="/purchase">Purchase</Link>
-							<Link to="registration">Registration</Link>
-							<Link to="login">Log IN</Link>
+							<Link to="/registration">Registration</Link>
+							<Link to="/login">Log IN</Link>
 							{user?.email && <Link to="/dashboard">Dashboard</Link>}
 							{user?.email && <Button onClick={logout}>log out</Button>}
 						</Nav>

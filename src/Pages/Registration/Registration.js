@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hook/uesAuth";
 
 const Registration = () => {
-	const { signInUsingGoogle, createAccount } = useAuth();
+	const { signInUsingGoogle, createAccount, handelUserInfoRegister } =
+		useAuth();
 	const location = useLocation();
 	const history = useHistory();
 	const redirect_uri = location.state?.from || "/home";
@@ -31,9 +32,18 @@ const Registration = () => {
 		e.preventDefault();
 		alert("registration done");
 		createAccount(email, password)
+			// .then((userCredential) => {
+			// 	const newUser = { email, displayName: name };
+			// 	setUser(email, name);
+			// 	//save user database
+			// 	saveUser(email);
+			// })
 			.then((result) => {
 				// Signed in
-				const user = result.user;
+
+				console.log(result.user);
+				handelUserInfoRegister(result.user.email);
+
 				history.push(redirect_uri);
 				// ...
 			})

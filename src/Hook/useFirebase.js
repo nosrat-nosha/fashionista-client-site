@@ -48,6 +48,19 @@ const useFirebase = () => {
 			}
 		});
 	}, []);
+	//send data database
+	const handelUserInfoRegister = (email) => {
+		fetch("http://localhost:5000/users", {
+			method: "POST",
+			headers: {
+				"content-type": "application/json",
+			},
+			body: JSON.stringify({ email }),
+		})
+			.then((res) => res.json())
+			.then((result) => console.log(result));
+	};
+
 	return {
 		user,
 		error,
@@ -55,6 +68,7 @@ const useFirebase = () => {
 		logout,
 		createAccount,
 		loginWithEmailAndPassword,
+		handelUserInfoRegister,
 	};
 };
 export default useFirebase;
