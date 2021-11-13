@@ -6,7 +6,7 @@ const MakeAdmin = () => {
 	const [email, setEmail] = useState("");
 	const { register, handleSubmit } = useForm();
 	const onSubmit = (data) => {
-		fetch("http://localhost:5000/makeAdmin", {
+		fetch("https://polar-forest-25031.herokuapp.com/makeAdmin", {
 			method: "PUT",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),

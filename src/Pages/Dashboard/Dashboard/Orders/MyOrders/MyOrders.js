@@ -10,14 +10,14 @@ const MyOrders = () => {
 	const [myOrder, setMyOrder] = useState([]);
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/myOrders/${user?.email}`)
+		fetch(`https://polar-forest-25031.herokuapp.com/myOrders/${user?.email}`)
 			.then((res) => res.json())
 			.then((data) => setMyOrder(data));
 	}, [user?.email]);
 
 	const handelDelete = (id) => {
 		console.log("click");
-		const url = `http://localhost:5000/products/${id}`;
+		const url = `https://polar-forest-25031.herokuapp.com/products/${id}`;
 		fetch(url, {
 			method: "DELETE",
 		})

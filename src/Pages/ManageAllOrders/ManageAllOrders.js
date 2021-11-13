@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
 	const [orders, serOrders] = useState([]);
 	const { user } = useAuth();
 	useEffect(() => {
-		fetch("http://localhost:5000/allOrders").then((res) =>
+		fetch("https://polar-forest-25031.herokuapp.com/allOrders").then((res) =>
 			res.json().then((data) => serOrders(data))
 		);
 	}, []);

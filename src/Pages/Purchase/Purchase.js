@@ -29,7 +29,7 @@ const Purchase = () => {
 	};
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/products`)
+		fetch(`https://polar-forest-25031.herokuapp.com/products`)
 			.then((res) => res.json())
 			.then((data) => setProduct(data));
 	}, []);
@@ -47,7 +47,7 @@ const Purchase = () => {
 		};
 		console.log(productData);
 		// send data to server
-		fetch("http://localhost:5000/productsData", {
+		fetch("https://polar-forest-25031.herokuapp.com/productsData", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

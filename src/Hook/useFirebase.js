@@ -50,7 +50,7 @@ const useFirebase = () => {
 	}, []);
 	//send data database
 	const handelUserInfoRegister = (email) => {
-		fetch("http://localhost:5000/users", {
+		fetch("https://polar-forest-25031.herokuapp.com/users", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

@@ -9,12 +9,14 @@ import { Link } from "react-router-dom";
 const AddAProduct = () => {
 	const { register, handleSubmit, reset } = useForm();
 	const onSubmit = (data) => {
-		axios.post(`http://localhost:5000/products`, data).then((res) => {
-			if (res.data.insertedId) {
-				alert("successfully Added");
-				reset();
-			}
-		});
+		axios
+			.post(`https://polar-forest-25031.herokuapp.com/products`, data)
+			.then((res) => {
+				if (res.data.insertedId) {
+					alert("successfully Added");
+					reset();
+				}
+			});
 		console.log(data);
 	};
 	return (

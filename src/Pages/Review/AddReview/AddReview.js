@@ -7,11 +7,13 @@ const AddReview = () => {
 	const { register, handleSubmit, reset } = useForm();
 	const onSubmit = (data) => {
 		console.log(data);
-		axios.post("http://localhost:5000/review", data).then((res) => {
-			console.log(res);
-			alert("successfully added");
-			reset();
-		});
+		axios
+			.post("https://polar-forest-25031.herokuapp.com/review", data)
+			.then((res) => {
+				console.log(res);
+				alert("successfully added");
+				reset();
+			});
 	};
 	return (
 		<div>
