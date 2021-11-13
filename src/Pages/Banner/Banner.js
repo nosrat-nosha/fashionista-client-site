@@ -23,9 +23,9 @@ const Banner = () => {
 					<Carousel.Caption>
 						<h3>Best Online Bag Shop</h3>
 						<p>Always provide best products to ous customer</p>
-						<Button>
+						<Button className="btn btn-danger">
 							<Link
-								to="purchase"
+								to="/explore"
 								style={{
 									textDecoration: "none",
 									color: "white",

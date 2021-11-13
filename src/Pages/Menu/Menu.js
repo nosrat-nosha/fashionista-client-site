@@ -22,9 +22,7 @@ const Menu = () => {
 							<Link className="nav-li  fw-bold" to="/explore">
 								Explore
 							</Link>
-							<Link className="nav-li fw-bold" to="/purchase">
-								Purchase
-							</Link>
+
 							<Link className="nav-li fw-bold" to="/registration">
 								Registration
 							</Link>

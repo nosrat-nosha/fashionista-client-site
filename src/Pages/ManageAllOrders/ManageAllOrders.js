@@ -25,16 +25,22 @@ const ManageAllOrders = () => {
 	const onSubmit = (data) => console.log(data);
 	return (
 		<div>
-			<h2>my orders {orders.length}</h2>
+			<Row>
+				<Col sm={6} className="p-5 mx-auto ">
+					<h2 className="text-center shadow">
+						MANAGE ALL<span className="text-danger">PRODUCTS</span>{" "}
+					</h2>
+				</Col>
+			</Row>
 			<Row>
 				{orders?.map((order) => (
 					<Col sm={4} lg={6} key={order._id}>
 						<Card className=" shadow">
 							<Card.Img
+								className="mx-auto rounded-circle"
 								style={{
-									height: "15rem",
-
-									alignItems: "center",
+									height: "12rem",
+									width: "12rem",
 								}}
 								variant="top"
 								src={order.img}

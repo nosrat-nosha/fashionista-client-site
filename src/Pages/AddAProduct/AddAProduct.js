@@ -24,12 +24,12 @@ const AddAProduct = () => {
 			<Row>
 				<Col sm={6} className="p-5 mx-auto ">
 					<h2 className="text-center shadow">
-						ADD YOUR <span className="text-danger">REVIEW</span>{" "}
+						ADD A <span className="text-danger">PRODUCT</span>{" "}
 					</h2>
 				</Col>
 			</Row>
 			<Row>
-				<Col lg={8} sm={4}>
+				<Col lg={8} sm={4} className="mx-auto p-3">
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<input
 							placeholder="img"
@@ -82,7 +82,7 @@ const AddAProduct = () => {
 						<br />
 
 						<br />
-						<input type="submit" />
+						<input className="btn btn-danger" type="submit" />
 					</form>
 				</Col>
 			</Row>

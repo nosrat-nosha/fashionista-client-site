@@ -69,7 +69,15 @@ const Purchase = () => {
 			<Row>
 				<Col lg={6} sm={4}>
 					<Card className=" col-lg-8 col-sm-4 mx-auto mt-5 shadow">
-						<Card.Img variant="top" className=" mx-auto " src={selected?.img} />
+						<Card.Img
+							variant="top"
+							className="mx-auto rounded-circle"
+							style={{
+								height: "12rem",
+								width: "12rem",
+							}}
+							src={selected?.img}
+						/>
 						<Card.Body>
 							<Card.Title className="text-secondary fw-bold">
 								{selected?.type}

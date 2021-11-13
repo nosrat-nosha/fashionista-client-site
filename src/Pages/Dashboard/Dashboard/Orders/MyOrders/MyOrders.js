@@ -41,10 +41,10 @@ const MyOrders = () => {
 					<Col sm={4} lg={6} key={order._id}>
 						<Card className=" shadow">
 							<Card.Img
+								className="mx-auto rounded-circle"
 								style={{
-									height: "15rem",
-
-									alignItems: "center",
+									height: "12rem",
+									width: "12rem",
 								}}
 								variant="top"
 								src={order.img}

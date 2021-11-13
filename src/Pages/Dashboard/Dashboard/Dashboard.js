@@ -51,7 +51,9 @@ const Dashboard = () => {
 						placement="end"
 					>
 						<Offcanvas.Header closeButton>
-							<Offcanvas.Title id="offcanvasNavbarLabel">Admin</Offcanvas.Title>
+							<Offcanvas.Title id="offcanvasNavbarLabel">
+								Dashboard
+							</Offcanvas.Title>
 						</Offcanvas.Header>
 						<Offcanvas.Body>
 							<User></User>

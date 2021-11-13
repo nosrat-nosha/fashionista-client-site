@@ -62,25 +62,31 @@ const Products = () => {
 			</Container>
 
 			<div className="team-container">
-				<h2 className="p-5 text-warning">Our Team Members</h2>
+				<Row>
+					<Col sm={6} className="p-5 mx-auto ">
+						<h2 className="text-center shadow">
+							OUR BEST <span className="text-danger"> PRODUCTS</span>{" "}
+						</h2>
+					</Col>
+				</Row>
 				<CardGroup className="bg-warning p-5 g-4 shadow-lg">
 					<Card>
 						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
-						<Card.Body>
+						<Card.Body className="text-center">
 							<Card.Title>Founder</Card.Title>
 							<Card.Text>Name: Adam Smith</Card.Text>
 						</Card.Body>
 					</Card>
 					<Card>
 						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
-						<Card.Body>
+						<Card.Body className="text-center">
 							<Card.Title>Co-Founder</Card.Title>
 							<Card.Text>Name: juliana smith</Card.Text>
 						</Card.Body>
 					</Card>
 					<Card>
 						<Card.Img variant="top" className="w-50 mx-auto p-3" src={user} />
-						<Card.Body>
+						<Card.Body className="text-center">
 							<Card.Title>Manager</Card.Title>
 							<Card.Text>Name: wiliam Hary</Card.Text>
 						</Card.Body>
