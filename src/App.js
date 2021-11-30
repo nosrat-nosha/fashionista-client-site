@@ -26,7 +26,7 @@ import Pay from "./Pages/Pay/Pay";
 
 function App() {
 	return (
-		<div>
+		<div className="app">
 			<AuthProvider>
 				<Router>
 					<Menu></Menu>

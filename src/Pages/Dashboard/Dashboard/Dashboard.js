@@ -70,12 +70,7 @@ const Dashboard = () => {
 								>
 									<li>My Orders</li>
 								</Link>
-								<Link
-									className="nav-li text-dark fw-bold"
-									to={`${url}/MyOrders`}
-								>
-									<li>My Orders</li>
-								</Link>
+
 								<Link className="nav-li text-dark fw-bold" to={`${url}/Pay`}>
 									<li>Pay</li>
 								</Link>

@@ -30,7 +30,7 @@ const MakeAdmin = () => {
 							name="email"
 							className="form-control"
 							placeholder="email"
-							value={user?.email}
+							// value={user?.email}
 							type="email"
 							{...register("email")}
 						/>

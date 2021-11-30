@@ -23,23 +23,22 @@ const Menu = () => {
 								Explore
 							</Link>
 
-							<Link className="nav-li fw-bold" to="/registration">
-								Registration
-							</Link>
-
 							{user?.email && (
 								<Link className="nav-li fw-bold" to="/dashboard">
 									Dashboard
 								</Link>
 							)}
-							<Link className="nav-li  fw-bold" to="/login">
+							{/* <Link className="nav-li  fw-bold" to="/login">
 								Log In
-							</Link>
+							</Link> */}
 							{user?.email && (
 								<Link className="nav-li fw-bold" onClick={logout}>
 									log out
 								</Link>
 							)}
+							<Link className="nav-li fw-bold" to="/registration">
+								Registration
+							</Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
